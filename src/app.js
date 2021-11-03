@@ -28,33 +28,6 @@ import getVisibleExpenses from "./selectors/expenses";
 //The store name is 'store'- this name is used in the Provider below
 const store = configureStore();
 
-//START*******************************************
-// Call to add an expense
-// Can set it to a variable to get the id (to be used to remove an expense)
-store.dispatch(
-  addExpense({
-    description: "Water Bill",
-    amount: 4500,
-    createdAt: 500,
-    note: "This is my Water Bill",
-  })
-);
-store.dispatch(
-  addExpense({
-    description: "Gas Bill",
-    amount: 300,
-    createdAt: 1000,
-    note: "This is my Gas Bill",
-  })
-);
-store.dispatch(
-  addExpense({
-    description: "Rent",
-    amount: 109500,
-    createdAt: 200,
-    note: "This is my Rent",
-  })
-);
 //END*******************************************
 
 //START*******************************************
@@ -74,8 +47,8 @@ store.dispatch(
 
 //START*******************************************
 //This will return the filtered results and print them to the console
-const state = store.getState();
-console.log(getVisibleExpenses(state.expenses, state.filters));
+// const state = store.getState();
+// console.log(getVisibleExpenses(state.expenses, state.filters));
 //END*******************************************
 
 //Use to pass in the store to the rest of the application
